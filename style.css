@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, sans-serif; /*fonte*/
+    display: flex; /*alinha lado a lado*/
+    justify-content: center; /*Alinhando o conteúdo no meio*/
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #333333; /*Cor cinza */
+}
+
+.container{
+    background-color: #000000;
+    border: 2px solid #ffd900; /*largura | estilo | cor da borda*/
+    border-radius: 5px; /*Espessura dos cantos do elemento */
+    box-shadow: 0px 0px 5px #ffd900; /*Sombreamento*/
+    padding: 30px; /*Espaçamento ao redor do conteúdo*/
+}
+
+span{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p{
+    color: white;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row-reverse; /*Empilha o contêiner da esquerda para direita*/
+    justify-content: center;
+    gap: 15px; /*Controla o espaçamentos de itens flexíveis*/
+}
+.rating input{
+    display: none;
+}
+.rating label {
+    font-size: 3.5rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/*Passou o mouse pela label, 
+ele vai ficar amarelo e se apertar também ficará amarelo*/
+.rating input:checked~label{
+    color: #f5b301;
+}
+
+.rating label:hover, 
+.rating label:hover~label{
+    color: #f5b301;
+}
